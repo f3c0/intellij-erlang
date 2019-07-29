@@ -129,8 +129,9 @@ public class RebarProjectRootStep extends ProjectImportWizardStep {
         indicator.setIndeterminate(true);
         GeneralCommandLine commandLine = new GeneralCommandLine();
         commandLine.withWorkDirectory(projectRoot.getCanonicalPath());
-        commandLine.setExePath(escriptPath);
-        commandLine.addParameter(rebarPath);
+        commandLine.setExePath(rebarPath);
+//        commandLine.setExePath(escriptPath);
+//        commandLine.addParameter(rebarPath);
         commandLine.addParameter("get-deps");
         try {
           OSProcessHandler handler = new OSProcessHandler(commandLine.createProcess(), commandLine.getPreparedCommandLine(Platform.current()));

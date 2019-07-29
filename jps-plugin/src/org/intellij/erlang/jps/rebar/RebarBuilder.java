@@ -101,8 +101,9 @@ public class RebarBuilder extends TargetBuilder<ErlangSourceRootDescriptor, Erla
                                @NotNull CompileContext context) throws ProjectBuildException {
     GeneralCommandLine commandLine = new GeneralCommandLine();
     commandLine.withWorkDirectory(contentRootPath);
-    commandLine.setExePath(escriptPath);
-    commandLine.addParameter(rebarPath);
+    commandLine.setExePath(rebarPath);
+//    commandLine.setExePath(escriptPath);
+//    commandLine.addParameter(rebarPath);
     commandLine.addParameter("compile");
 
     if (addDebugInfo) {
